@@ -24,6 +24,7 @@
 		2E54BBF627C39E630052D2E8 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54BBF527C39E630052D2E8 /* CountryModel.swift */; };
 		2E54BBF827C39E810052D2E8 /* CountriesListViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54BBF727C39E810052D2E8 /* CountriesListViewControllerProtocol.swift */; };
 		2E54BBFA27C39F590052D2E8 /* RemoteServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54BBF927C39F590052D2E8 /* RemoteServiceProtocol.swift */; };
+		2E54BBFE27C3A10E0052D2E8 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54BBFD27C3A10E0052D2E8 /* UIViewControllerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		2E54BBF527C39E630052D2E8 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		2E54BBF727C39E810052D2E8 /* CountriesListViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListViewControllerProtocol.swift; sourceTree = "<group>"; };
 		2E54BBF927C39F590052D2E8 /* RemoteServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteServiceProtocol.swift; sourceTree = "<group>"; };
+		2E54BBFD27C3A10E0052D2E8 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		72B6D616FC77937B8CD5B024 /* Pods_CountriesAPI_iOSTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountriesAPI_iOSTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFF46C8D2F60630B0C66E7F7 /* Pods-CountriesAPI_iOSTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountriesAPI_iOSTask.debug.xcconfig"; path = "Target Support Files/Pods-CountriesAPI_iOSTask/Pods-CountriesAPI_iOSTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +93,7 @@
 		2E54BBC927C397920052D2E8 /* CountriesAPI_iOSTask */ = {
 			isa = PBXGroup;
 			children = (
+				2E54BBFB27C3A0F40052D2E8 /* Common */,
 				2E54BBF427C39E5D0052D2E8 /* Models */,
 				2E54BBF127C39E3D0052D2E8 /* UIModels */,
 				2E54BBEE27C39E000052D2E8 /* Protocols */,
@@ -174,6 +177,22 @@
 				2E54BBF527C39E630052D2E8 /* CountryModel.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		2E54BBFB27C3A0F40052D2E8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2E54BBFC27C3A0F90052D2E8 /* Extensions */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		2E54BBFC27C3A0F90052D2E8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2E54BBFD27C3A10E0052D2E8 /* UIViewControllerExtensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		6FC36CFABEBBF9262EBF1E45 /* Pods */ = {
@@ -306,6 +325,7 @@
 				2E54BBF327C39E490052D2E8 /* CountryUIModel.swift in Sources */,
 				2E54BBE927C39CD40052D2E8 /* APIRouter.swift in Sources */,
 				2E54BBF827C39E810052D2E8 /* CountriesListViewControllerProtocol.swift in Sources */,
+				2E54BBFE27C3A10E0052D2E8 /* UIViewControllerExtensions.swift in Sources */,
 				2E54BBED27C39D7E0052D2E8 /* CountriesListViewModel.swift in Sources */,
 				2E54BBE827C39CD40052D2E8 /* RemoteService.swift in Sources */,
 				2E54BBE727C39CD40052D2E8 /* APIError.swift in Sources */,
