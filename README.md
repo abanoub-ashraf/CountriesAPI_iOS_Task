@@ -28,3 +28,24 @@ The gaol of this task is to check your knowledge, speed, code quality, UI backgr
 ## While building this app:
 
 • Using GIT and commit as often as possible using descriptive description.
+
+<br />
+<br />
+
+### Technologies I used:
+
+1- Alamofire
+2- RxSwift
+3- Realm
+4- RxRealm
+5- MVVM Design Pattern
+6- Generics
+
+### What I learned:
+
+* How to make a Generic Network Layer using Alamofire and RxSwift
+* How to save the Data locally using Realm Database incase the Device has no Internet Connection
+* How to show Remote/Local Data to the user based on the Internet Connection
+* How to get the User's Location using CLLocationManager
+
+### Future Updates (On my own later)

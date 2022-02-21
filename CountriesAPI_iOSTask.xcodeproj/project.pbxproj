@@ -294,6 +294,7 @@
 			buildConfigurationList = 2E54BBDB27C397950052D2E8 /* Build configuration list for PBXNativeTarget "CountriesAPI_iOSTask" */;
 			buildPhases = (
 				696FCBEADA7B076B7E04D948 /* [CP] Check Pods Manifest.lock */,
+				2E03E7E227C3EEDD00BF4521 /* Run SwiftLint */,
 				2E54BBC327C397920052D2E8 /* Sources */,
 				2E54BBC427C397920052D2E8 /* Frameworks */,
 				2E54BBC527C397920052D2E8 /* Resources */,
@@ -355,6 +356,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2E03E7E227C3EEDD00BF4521 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		696FCBEADA7B076B7E04D948 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

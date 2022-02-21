@@ -152,7 +152,7 @@ extension CountriesListViewController: CountriesListViewControllerProtocol {
     /// configure the table view cell with model data
     ///
     func configureTableViewCell(cell: UITableViewCell, model: CountryUIModel) {
-        cell.backgroundColor                = .systemGray
+        cell.backgroundColor                = .systemBackground
         
         cell.textLabel?.text                = "Country's Name: \(model.name)"
         cell.textLabel?.font                = .systemFont(ofSize: 20)
