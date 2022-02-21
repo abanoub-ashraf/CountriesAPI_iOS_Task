@@ -103,15 +103,8 @@
 		2E54BBC927C397920052D2E8 /* CountriesAPI_iOSTask */ = {
 			isa = PBXGroup;
 			children = (
-				2E54BC0127C3A7480052D2E8 /* LocalCountries */,
 				2E54BBFB27C3A0F40052D2E8 /* Common */,
-				2E54BBF427C39E5D0052D2E8 /* Models */,
-				2E54BBF127C39E3D0052D2E8 /* UIModels */,
-				2E54BBEE27C39E000052D2E8 /* Protocols */,
-				2E54BBEB27C39CE20052D2E8 /* ViewModels */,
-				2E54BBE227C39CD40052D2E8 /* DataSource */,
-				2E54BBE127C399FC0052D2E8 /* Views */,
-				2E54BBE027C399F40052D2E8 /* Controllers */,
+				2E54BC0D27C3AF070052D2E8 /* AllCountries */,
 				2E54BBDE27C398010052D2E8 /* AppFiles */,
 			);
 			path = CountriesAPI_iOSTask;
@@ -136,6 +129,7 @@
 				2E54BBFF27C3A5BF0052D2E8 /* CountryDetailsViewController.swift */,
 			);
 			name = Controllers;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		2E54BBE127C399FC0052D2E8 /* Views */ = {
@@ -163,6 +157,7 @@
 				2E54BBEC27C39D7E0052D2E8 /* CountriesListViewModel.swift */,
 			);
 			name = ViewModels;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		2E54BBEE27C39E000052D2E8 /* Protocols */ = {
@@ -170,9 +165,9 @@
 			children = (
 				2E54BBEF27C39E0C0052D2E8 /* CountriesListViewModelProtocol.swift */,
 				2E54BBF727C39E810052D2E8 /* CountriesListViewControllerProtocol.swift */,
-				2E54BBF927C39F590052D2E8 /* RemoteServiceProtocol.swift */,
 			);
 			name = Protocols;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		2E54BBF127C39E3D0052D2E8 /* UIModels */ = {
@@ -194,6 +189,7 @@
 		2E54BBFB27C3A0F40052D2E8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2E54BBE127C399FC0052D2E8 /* Views */,
 				2E54BBFC27C3A0F90052D2E8 /* Extensions */,
 			);
 			name = Common;
@@ -212,8 +208,8 @@
 			isa = PBXGroup;
 			children = (
 				2E54BC0227C3A7480052D2E8 /* DataSource */,
-				2E54BC0427C3A7480052D2E8 /* Protocols */,
 				2E54BC0627C3A7480052D2E8 /* Entities */,
+				2E54BC0427C3A7480052D2E8 /* Protocols */,
 			);
 			path = LocalCountries;
 			sourceTree = "<group>";
@@ -240,6 +236,45 @@
 				2E54BC0727C3A7480052D2E8 /* CountryEntity.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		2E54BC0D27C3AF070052D2E8 /* AllCountries */ = {
+			isa = PBXGroup;
+			children = (
+				2E54BC1127C3AFF30052D2E8 /* Core */,
+				2E54BC0E27C3AF150052D2E8 /* RemoteCountries */,
+				2E54BC0127C3A7480052D2E8 /* LocalCountries */,
+			);
+			name = AllCountries;
+			sourceTree = "<group>";
+		};
+		2E54BC0E27C3AF150052D2E8 /* RemoteCountries */ = {
+			isa = PBXGroup;
+			children = (
+				2E54BBE227C39CD40052D2E8 /* DataSource */,
+				2E54BBF427C39E5D0052D2E8 /* Models */,
+				2E54BC0F27C3AF370052D2E8 /* Protocols */,
+				2E54BBF127C39E3D0052D2E8 /* UIModels */,
+			);
+			name = RemoteCountries;
+			sourceTree = "<group>";
+		};
+		2E54BC0F27C3AF370052D2E8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2E54BBF927C39F590052D2E8 /* RemoteServiceProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		2E54BC1127C3AFF30052D2E8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2E54BBE027C399F40052D2E8 /* Controllers */,
+				2E54BBEB27C39CE20052D2E8 /* ViewModels */,
+				2E54BBEE27C39E000052D2E8 /* Protocols */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		6FC36CFABEBBF9262EBF1E45 /* Pods */ = {
