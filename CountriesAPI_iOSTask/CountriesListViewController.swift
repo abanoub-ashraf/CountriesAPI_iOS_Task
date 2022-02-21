@@ -32,6 +32,21 @@ class CountriesListViewController: UIViewController {
         viewModel.viewModelDidLoad()
     }
     
+    // MARK: - Helper Functions
+
+    private func pushDetailsViewControllerOnTheScreen(countryModel: ControlEvent<CountryUIModel>.Element) {
+        let storyboard      = UIStoryboard(name: "Main", bundle: nil)
+        let controllerID    = String(describing: CountryDetailsViewController.self)
+        
+        let detailsViewController = storyboard.instantiateViewController(
+            withIdentifier: controllerID
+        ) as! CountryDetailsViewController
+        
+        detailsViewController.countryModel = countryModel
+        
+        self.present(detailsViewController, animated: true)
+    }
+    
     // MARK: - TableView Methods
     
     ///
@@ -55,7 +70,10 @@ class CountriesListViewController: UIViewController {
             .modelSelected(CountryUIModel.self)
             .observe(on: MainScheduler.instance)
             .bind { country in
-                
+                ///
+                /// display the details of the country in a new screen
+                ///
+                self.pushDetailsViewControllerOnTheScreen(countryModel: country)
             }
             .disposed(by: disposeBag)
     }
