@@ -11,11 +11,11 @@ class CountriesListViewModel {
     
     let countriesDataSource = BehaviorSubject<[CountryUIModel]>(value: [])
     
+    let currentLocationCountryUIModel = PublishSubject<CountryUIModel>()
+    
     let disposeBag = DisposeBag()
     
     weak var view: CountriesListViewControllerProtocol?
-    
-    var countrUIModel = PublishSubject<CountryUIModel>()
     
     // MARK: - Initializer
     
@@ -65,9 +65,14 @@ class CountriesListViewModel {
                 }
             }
             .subscribe { [weak self] countries in
-//                var updatedCountries = Array(countries)
-//                updatedCountries.insert((self?.countrUIModel)!, at: 0)
-                self?.countriesDataSource.onNext(countries)
+                var updatedCountries = Array(countries)
+                self?.currentLocationCountryUIModel
+                    .subscribe(onNext:{
+                        print("---------------------->>>>> \($0)")
+                        updatedCountries.insert($0, at: 0)
+                    })
+                    .dispose()
+                self?.countriesDataSource.onNext(updatedCountries)
             } onError: { _ in }
             .disposed(by: disposeBag)
     }

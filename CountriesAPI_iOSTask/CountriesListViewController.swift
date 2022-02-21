@@ -17,11 +17,6 @@ class CountriesListViewController: UIViewController {
         localService: LocalService.shared
     )
     
-    var city: String = ""
-    var country: String = ""
-    var lat: Double = 0.0
-    var lang: Double = 0.0
-    
     // MARK: - UI
     
     @IBOutlet private weak var tableView: UITableView!
@@ -205,10 +200,23 @@ extension CountriesListViewController: CLLocationManagerDelegate {
                     let country = country
                 else { return }
                 
-                self.city = city
-                self.country = country
-                self.lat = lat
-                self.lang = lang
+                let currentLocationCountryUIModel = CountryUIModel(
+                    countryModel: CountryModel(
+                        name: country,
+                        capital: city,
+                        latlng: [lat, lang]
+                    )
+                )
+                
+                ///
+                /// send the current location object to the view model
+                ///
+                /// the view model will subscribe to it to use the value and append it there
+                ///
+                self.viewModel
+                    .currentLocationCountryUIModel
+                    .onNext(currentLocationCountryUIModel)
+                    
             }
         }
     }

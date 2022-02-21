@@ -17,6 +17,8 @@ protocol CountriesListViewModelProtocol: AnyObject {
     ///
     var countriesDataSource: BehaviorSubject<[CountryUIModel]> { get }
     
+    var currentLocationCountryUIModel: PublishSubject<CountryUIModel> { get }
+    
     // MARK: - Methods
     
     func viewModelDidLoad()
