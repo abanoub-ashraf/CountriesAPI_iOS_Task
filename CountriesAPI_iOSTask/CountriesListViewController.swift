@@ -9,7 +9,8 @@ class CountriesListViewController: UIViewController {
     let disposeBag = DisposeBag()
     
     private var viewModel: CountriesListViewModelProtocol = CountriesListViewModel(
-        remoteService: RemoteService.shared
+        remoteService: RemoteService.shared,
+        localService: LocalService.shared
     )
     
     // MARK: - UI
@@ -74,6 +75,45 @@ class CountriesListViewController: UIViewController {
                 /// display the details of the country in a new screen
                 ///
                 self.pushDetailsViewControllerOnTheScreen(countryModel: country)
+                self.viewModel.saveLocalCountry(country: country)
+            }
+            .disposed(by: disposeBag)
+        
+        swipeToDeleteFromTableView()
+    }
+    
+    func swipeToDeleteFromTableView() {
+        tableView
+            .rx
+            .modelDeleted(CountryUIModel.self)
+            .observe(on: MainScheduler.instance)
+            .bind { [weak self] country in
+                ///
+                /// if this function returns true, the wen are deleting an item from the database
+                ///
+                if self?.viewModel.deleteLocalCountry(country: country) ?? false {
+                    do {
+                        ///
+                        /// grab the values of the datasource array from the viewmolde
+                        ///
+                        let dataSource = try self?.viewModel.countriesDataSource.value()
+                        
+                        ///
+                        /// remove from it the passed model object to update ui
+                        ///
+                        let updatedDataSource = dataSource?.filter { model in
+                            country.name != model.name
+                        }
+                        
+                        ///
+                        /// pass the new updated array back to the datasource of the viewmodel
+                        ///
+                        self?.viewModel.countriesDataSource
+                            .onNext(updatedDataSource ?? [])
+                    } catch {
+                        print(error)
+                    }
+                }
             }
             .disposed(by: disposeBag)
     }

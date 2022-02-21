@@ -21,4 +21,8 @@ protocol CountriesListViewModelProtocol: AnyObject {
     
     func viewModelDidLoad()
     
+    func saveLocalCountry(country: ControlEvent<CountryUIModel>.Element)
+    
+    func deleteLocalCountry(country: ControlEvent<CountryUIModel>.Element) -> Bool
+    
 }

@@ -7,6 +7,7 @@ class CountriesListViewModel {
     // MARK: - Properties
 
     let remoteService: RemoteService
+    let localService: LocalService
     
     weak var view: CountriesListViewControllerProtocol?
     
@@ -16,8 +17,9 @@ class CountriesListViewModel {
     
     // MARK: - Initializer
     
-    init(remoteService: RemoteService) {
+    init(remoteService: RemoteService, localService: LocalService) {
         self.remoteService  = remoteService
+        self.localService = localService
     }
     
     // MARK: - Helper Functions
@@ -35,9 +37,34 @@ class CountriesListViewModel {
             }
             .subscribe { [weak self] countries in
                 self?.countriesDataSource.onNext(countries)
-            } onError: { [weak self] error in
-                print(error)
+            } onError: { [weak self] _ in
+                self?.view?.displayOfflineError(
+                    errorMessage: "You're Offline. the Countries might be Outdated. please check your Internet Connection."
+                )
+                self?.fetchLocalCountries()
             }
+            .disposed(by: disposeBag)
+    }
+    
+    func fetchLocalCountries() {
+        localService.getCountries()
+            .map {
+                $0.map {
+                    CountryUIModel(
+                        countryModel: CountryModel(
+                            name: $0.countryName,
+                            capital: $0.countryCapital,
+                            latlng: [
+                                $0.lat,
+                                $0.lang
+                            ]
+                        )
+                    )
+                }
+            }
+            .subscribe { [weak self] countries in
+                self?.countriesDataSource.onNext(countries)
+            } onError: { _ in }
             .disposed(by: disposeBag)
     }
     
@@ -59,6 +86,19 @@ extension CountriesListViewModel: CountriesListViewModelProtocol {
     func viewModelDidLoad() {
         fetchCountryViewModels()
         view?.configureUIBinding()
+    }
+    
+    func saveLocalCountry(country: ControlEvent<CountryUIModel>.Element) {
+        localService.saveCountry(
+            name: country.name,
+            capital: country.capital,
+            lat: country.lat,
+            lang: country.lang
+        )
+    }
+    
+    func deleteLocalCountry(country: ControlEvent<CountryUIModel>.Element) -> Bool {
+        return localService.deleteCountry(name: country.name)
     }
     
 }
