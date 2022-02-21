@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EFC2328734D0CC48B978F5D /* Pods_CountriesAPI_iOSTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B6D616FC77937B8CD5B024 /* Pods_CountriesAPI_iOSTask.framework */; };
 		2E54BBCB27C397920052D2E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54BBCA27C397920052D2E8 /* AppDelegate.swift */; };
 		2E54BBCD27C397920052D2E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54BBCC27C397920052D2E8 /* SceneDelegate.swift */; };
 		2E54BBCF27C397920052D2E8 /* CountriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54BBCE27C397920052D2E8 /* CountriesListViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B64A4834BC6E0B180F525B8 /* Pods-CountriesAPI_iOSTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountriesAPI_iOSTask.release.xcconfig"; path = "Target Support Files/Pods-CountriesAPI_iOSTask/Pods-CountriesAPI_iOSTask.release.xcconfig"; sourceTree = "<group>"; };
 		2E54BBC727C397920052D2E8 /* CountriesAPI_iOSTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountriesAPI_iOSTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E54BBCA27C397920052D2E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E54BBCC27C397920052D2E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		2E54BBD327C397950052D2E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E54BBD627C397950052D2E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E54BBD827C397950052D2E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72B6D616FC77937B8CD5B024 /* Pods_CountriesAPI_iOSTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountriesAPI_iOSTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFF46C8D2F60630B0C66E7F7 /* Pods-CountriesAPI_iOSTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountriesAPI_iOSTask.debug.xcconfig"; path = "Target Support Files/Pods-CountriesAPI_iOSTask/Pods-CountriesAPI_iOSTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EFC2328734D0CC48B978F5D /* Pods_CountriesAPI_iOSTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CCD9348FC76B52E7C1D7173 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72B6D616FC77937B8CD5B024 /* Pods_CountriesAPI_iOSTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2E54BBBE27C397910052D2E8 = {
 			isa = PBXGroup;
 			children = (
 				2E54BBC927C397920052D2E8 /* CountriesAPI_iOSTask */,
 				2E54BBC827C397920052D2E8 /* Products */,
+				6FC36CFABEBBF9262EBF1E45 /* Pods */,
+				2CCD9348FC76B52E7C1D7173 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +71,8 @@
 		2E54BBC927C397920052D2E8 /* CountriesAPI_iOSTask */ = {
 			isa = PBXGroup;
 			children = (
-				2E54BBCE27C397920052D2E8 /* CountriesListViewController.swift */,
-				2E54BBD027C397920052D2E8 /* Main.storyboard */,
+				2E54BBE127C399FC0052D2E8 /* Views */,
+				2E54BBE027C399F40052D2E8 /* Controllers */,
 				2E54BBDE27C398010052D2E8 /* AppFiles */,
 			);
 			path = CountriesAPI_iOSTask;
@@ -75,6 +90,31 @@
 			name = AppFiles;
 			sourceTree = "<group>";
 		};
+		2E54BBE027C399F40052D2E8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2E54BBCE27C397920052D2E8 /* CountriesListViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2E54BBE127C399FC0052D2E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E54BBD027C397920052D2E8 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		6FC36CFABEBBF9262EBF1E45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFF46C8D2F60630B0C66E7F7 /* Pods-CountriesAPI_iOSTask.debug.xcconfig */,
+				2B64A4834BC6E0B180F525B8 /* Pods-CountriesAPI_iOSTask.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +122,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E54BBDB27C397950052D2E8 /* Build configuration list for PBXNativeTarget "CountriesAPI_iOSTask" */;
 			buildPhases = (
+				696FCBEADA7B076B7E04D948 /* [CP] Check Pods Manifest.lock */,
 				2E54BBC327C397920052D2E8 /* Sources */,
 				2E54BBC427C397920052D2E8 /* Frameworks */,
 				2E54BBC527C397920052D2E8 /* Resources */,
+				B193BAC1198551167E8170E4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,6 +182,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		696FCBEADA7B076B7E04D948 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CountriesAPI_iOSTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B193BAC1198551167E8170E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CountriesAPI_iOSTask/Pods-CountriesAPI_iOSTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CountriesAPI_iOSTask/Pods-CountriesAPI_iOSTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CountriesAPI_iOSTask/Pods-CountriesAPI_iOSTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2E54BBC327C397920052D2E8 /* Sources */ = {
@@ -292,6 +376,7 @@
 		};
 		2E54BBDC27C397950052D2E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFF46C8D2F60630B0C66E7F7 /* Pods-CountriesAPI_iOSTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -320,6 +405,7 @@
 		};
 		2E54BBDD27C397950052D2E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B64A4834BC6E0B180F525B8 /* Pods-CountriesAPI_iOSTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
