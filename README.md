@@ -46,6 +46,7 @@ The gaol of this task is to check your knowledge, speed, code quality, UI backgr
 * How to make a Generic Network Layer using Alamofire and RxSwift
 * How to save the Data locally using Realm Database incase the Device has no Internet Connection
 * How to show Remote/Local Data to the user based on the Internet Connection
+* How to delete only the Local Data that 's stored inside Realm Database
 * How to get the User's Location using CLLocationManager
 
 <br />

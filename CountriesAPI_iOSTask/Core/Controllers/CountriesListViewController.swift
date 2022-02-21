@@ -216,7 +216,7 @@ extension CountriesListViewController: CLLocationManagerDelegate {
                 self.viewModel
                     .currentLocationCountryUIModel
                     .onNext(currentLocationCountryUIModel)
-                    
+                
             }
         }
     }
