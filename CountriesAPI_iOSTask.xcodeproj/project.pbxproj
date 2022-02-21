@@ -29,6 +29,7 @@
 		2E54BC0827C3A7480052D2E8 /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54BC0327C3A7480052D2E8 /* LocalService.swift */; };
 		2E54BC0927C3A7480052D2E8 /* LocalServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54BC0527C3A7480052D2E8 /* LocalServiceProtocol.swift */; };
 		2E54BC0A27C3A7480052D2E8 /* CountryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54BC0727C3A7480052D2E8 /* CountryEntity.swift */; };
+		2E54BC0C27C3AB470052D2E8 /* CLLocationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54BC0B27C3AB470052D2E8 /* CLLocationExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		2E54BC0327C3A7480052D2E8 /* LocalService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
 		2E54BC0527C3A7480052D2E8 /* LocalServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalServiceProtocol.swift; sourceTree = "<group>"; };
 		2E54BC0727C3A7480052D2E8 /* CountryEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryEntity.swift; sourceTree = "<group>"; };
+		2E54BC0B27C3AB470052D2E8 /* CLLocationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationExtensions.swift; sourceTree = "<group>"; };
 		72B6D616FC77937B8CD5B024 /* Pods_CountriesAPI_iOSTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountriesAPI_iOSTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFF46C8D2F60630B0C66E7F7 /* Pods-CountriesAPI_iOSTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountriesAPI_iOSTask.debug.xcconfig"; path = "Target Support Files/Pods-CountriesAPI_iOSTask/Pods-CountriesAPI_iOSTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				2E54BBFD27C3A10E0052D2E8 /* UIViewControllerExtensions.swift */,
+				2E54BC0B27C3AB470052D2E8 /* CLLocationExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 			files = (
 				2E54BC0927C3A7480052D2E8 /* LocalServiceProtocol.swift in Sources */,
 				2E54BBCF27C397920052D2E8 /* CountriesListViewController.swift in Sources */,
+				2E54BC0C27C3AB470052D2E8 /* CLLocationExtensions.swift in Sources */,
 				2E54BBEA27C39CD40052D2E8 /* APICosntants.swift in Sources */,
 				2E54BBF627C39E630052D2E8 /* CountryModel.swift in Sources */,
 				2E54BBF327C39E490052D2E8 /* CountryUIModel.swift in Sources */,

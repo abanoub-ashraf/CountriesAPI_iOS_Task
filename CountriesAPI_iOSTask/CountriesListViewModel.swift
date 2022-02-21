@@ -5,25 +5,27 @@ import RxCocoa
 class CountriesListViewModel {
     
     // MARK: - Properties
-
+    
     let remoteService: RemoteService
     let localService: LocalService
-    
-    weak var view: CountriesListViewControllerProtocol?
     
     let countriesDataSource = BehaviorSubject<[CountryUIModel]>(value: [])
     
     let disposeBag = DisposeBag()
     
+    weak var view: CountriesListViewControllerProtocol?
+    
+    var countrUIModel = PublishSubject<CountryUIModel>()
+    
     // MARK: - Initializer
     
     init(remoteService: RemoteService, localService: LocalService) {
         self.remoteService  = remoteService
-        self.localService = localService
+        self.localService   = localService
     }
     
     // MARK: - Helper Functions
-
+    
     func fetchCountryViewModels() {
         remoteService.getCountries()
         ///
@@ -63,6 +65,8 @@ class CountriesListViewModel {
                 }
             }
             .subscribe { [weak self] countries in
+//                var updatedCountries = Array(countries)
+//                updatedCountries.insert((self?.countrUIModel)!, at: 0)
                 self?.countriesDataSource.onNext(countries)
             } onError: { _ in }
             .disposed(by: disposeBag)

@@ -1,10 +1,14 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RealmSwift
+import CoreLocation
 
 class CountriesListViewController: UIViewController {
     
     // MARK: - Properties
+    
+    private var locationManager: CLLocationManager?
     
     let disposeBag = DisposeBag()
     
@@ -12,6 +16,11 @@ class CountriesListViewController: UIViewController {
         remoteService: RemoteService.shared,
         localService: LocalService.shared
     )
+    
+    var city: String = ""
+    var country: String = ""
+    var lat: Double = 0.0
+    var lang: Double = 0.0
     
     // MARK: - UI
     
@@ -31,10 +40,21 @@ class CountriesListViewController: UIViewController {
         /// use the function of that delegate
         ///
         viewModel.viewModelDidLoad()
+        
+        configureCoreLocation()
     }
     
     // MARK: - Helper Functions
-
+    
+    private func configureCoreLocation() {
+        locationManager = CLLocationManager()
+        
+        locationManager?.requestAlwaysAuthorization()
+        locationManager?.startUpdatingLocation()
+        locationManager?.delegate = self
+        locationManager?.allowsBackgroundLocationUpdates = true
+    }
+    
     private func pushDetailsViewControllerOnTheScreen(countryModel: ControlEvent<CountryUIModel>.Element) {
         let storyboard      = UIStoryboard(name: "Main", bundle: nil)
         let controllerID    = String(describing: CountryDetailsViewController.self)
@@ -79,10 +99,10 @@ class CountriesListViewController: UIViewController {
             }
             .disposed(by: disposeBag)
         
-        swipeToDeleteFromTableView()
+        deleteFromTableView()
     }
     
-    func swipeToDeleteFromTableView() {
+    func deleteFromTableView() {
         tableView
             .rx
             .modelDeleted(CountryUIModel.self)
@@ -108,7 +128,8 @@ class CountriesListViewController: UIViewController {
                         ///
                         /// pass the new updated array back to the datasource of the viewmodel
                         ///
-                        self?.viewModel.countriesDataSource
+                        self?.viewModel
+                            .countriesDataSource
                             .onNext(updatedDataSource ?? [])
                     } catch {
                         print(error)
@@ -151,6 +172,49 @@ extension CountriesListViewController: CountriesListViewControllerProtocol {
         DispatchQueue.main.async {
             self.showToast(text: errorMessage)
         }
+    }
+    
+}
+
+// MARK: - CLLocationManagerDelegate
+
+extension CountriesListViewController: CLLocationManagerDelegate {
+    
+    ///
+    /// tells the delegate that the new location data is available
+    ///
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        ///
+        /// the last location is the most accurate one so that's what we want
+        ///
+        if let location = locations.last {
+            ///
+            /// comment this line if you wanna the location to be kept updating
+            /// when the app goes to the background
+            ///
+            locationManager?.stopUpdatingLocation()
+            
+            let lat  = location.coordinate.latitude
+            let lang = location.coordinate.longitude
+            
+            let location = CLLocation(latitude: lat, longitude: lang)
+            
+            location.fetchCityAndCountry { city, country in
+                guard
+                    let city = city,
+                    let country = country
+                else { return }
+                
+                self.city = city
+                self.country = country
+                self.lat = lat
+                self.lang = lang
+            }
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
     }
     
 }
