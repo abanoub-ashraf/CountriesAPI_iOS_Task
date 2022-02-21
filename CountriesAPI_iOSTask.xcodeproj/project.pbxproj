@@ -14,6 +14,16 @@
 		2E54BBD227C397920052D2E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E54BBD027C397920052D2E8 /* Main.storyboard */; };
 		2E54BBD427C397950052D2E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E54BBD327C397950052D2E8 /* Assets.xcassets */; };
 		2E54BBD727C397950052D2E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E54BBD527C397950052D2E8 /* LaunchScreen.storyboard */; };
+		2E54BBE727C39CD40052D2E8 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54BBE327C39CD40052D2E8 /* APIError.swift */; };
+		2E54BBE827C39CD40052D2E8 /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54BBE427C39CD40052D2E8 /* RemoteService.swift */; };
+		2E54BBE927C39CD40052D2E8 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54BBE527C39CD40052D2E8 /* APIRouter.swift */; };
+		2E54BBEA27C39CD40052D2E8 /* APICosntants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54BBE627C39CD40052D2E8 /* APICosntants.swift */; };
+		2E54BBED27C39D7E0052D2E8 /* CountriesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54BBEC27C39D7E0052D2E8 /* CountriesListViewModel.swift */; };
+		2E54BBF027C39E0C0052D2E8 /* CountriesListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54BBEF27C39E0C0052D2E8 /* CountriesListViewModelProtocol.swift */; };
+		2E54BBF327C39E490052D2E8 /* CountryUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54BBF227C39E490052D2E8 /* CountryUIModel.swift */; };
+		2E54BBF627C39E630052D2E8 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54BBF527C39E630052D2E8 /* CountryModel.swift */; };
+		2E54BBF827C39E810052D2E8 /* CountriesListViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54BBF727C39E810052D2E8 /* CountriesListViewControllerProtocol.swift */; };
+		2E54BBFA27C39F590052D2E8 /* RemoteServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54BBF927C39F590052D2E8 /* RemoteServiceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +36,16 @@
 		2E54BBD327C397950052D2E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E54BBD627C397950052D2E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E54BBD827C397950052D2E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E54BBE327C39CD40052D2E8 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		2E54BBE427C39CD40052D2E8 /* RemoteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteService.swift; sourceTree = "<group>"; };
+		2E54BBE527C39CD40052D2E8 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		2E54BBE627C39CD40052D2E8 /* APICosntants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICosntants.swift; sourceTree = "<group>"; };
+		2E54BBEC27C39D7E0052D2E8 /* CountriesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListViewModel.swift; sourceTree = "<group>"; };
+		2E54BBEF27C39E0C0052D2E8 /* CountriesListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListViewModelProtocol.swift; sourceTree = "<group>"; };
+		2E54BBF227C39E490052D2E8 /* CountryUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryUIModel.swift; sourceTree = "<group>"; };
+		2E54BBF527C39E630052D2E8 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		2E54BBF727C39E810052D2E8 /* CountriesListViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListViewControllerProtocol.swift; sourceTree = "<group>"; };
+		2E54BBF927C39F590052D2E8 /* RemoteServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteServiceProtocol.swift; sourceTree = "<group>"; };
 		72B6D616FC77937B8CD5B024 /* Pods_CountriesAPI_iOSTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountriesAPI_iOSTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFF46C8D2F60630B0C66E7F7 /* Pods-CountriesAPI_iOSTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountriesAPI_iOSTask.debug.xcconfig"; path = "Target Support Files/Pods-CountriesAPI_iOSTask/Pods-CountriesAPI_iOSTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +91,11 @@
 		2E54BBC927C397920052D2E8 /* CountriesAPI_iOSTask */ = {
 			isa = PBXGroup;
 			children = (
+				2E54BBF427C39E5D0052D2E8 /* Models */,
+				2E54BBF127C39E3D0052D2E8 /* UIModels */,
+				2E54BBEE27C39E000052D2E8 /* Protocols */,
+				2E54BBEB27C39CE20052D2E8 /* ViewModels */,
+				2E54BBE227C39CD40052D2E8 /* DataSource */,
 				2E54BBE127C399FC0052D2E8 /* Views */,
 				2E54BBE027C399F40052D2E8 /* Controllers */,
 				2E54BBDE27C398010052D2E8 /* AppFiles */,
@@ -104,6 +129,51 @@
 				2E54BBD027C397920052D2E8 /* Main.storyboard */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		2E54BBE227C39CD40052D2E8 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				2E54BBE327C39CD40052D2E8 /* APIError.swift */,
+				2E54BBE427C39CD40052D2E8 /* RemoteService.swift */,
+				2E54BBE527C39CD40052D2E8 /* APIRouter.swift */,
+				2E54BBE627C39CD40052D2E8 /* APICosntants.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		2E54BBEB27C39CE20052D2E8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2E54BBEC27C39D7E0052D2E8 /* CountriesListViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		2E54BBEE27C39E000052D2E8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2E54BBEF27C39E0C0052D2E8 /* CountriesListViewModelProtocol.swift */,
+				2E54BBF727C39E810052D2E8 /* CountriesListViewControllerProtocol.swift */,
+				2E54BBF927C39F590052D2E8 /* RemoteServiceProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		2E54BBF127C39E3D0052D2E8 /* UIModels */ = {
+			isa = PBXGroup;
+			children = (
+				2E54BBF227C39E490052D2E8 /* CountryUIModel.swift */,
+			);
+			name = UIModels;
+			sourceTree = "<group>";
+		};
+		2E54BBF427C39E5D0052D2E8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E54BBF527C39E630052D2E8 /* CountryModel.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		6FC36CFABEBBF9262EBF1E45 /* Pods */ = {
@@ -231,8 +301,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E54BBCF27C397920052D2E8 /* CountriesListViewController.swift in Sources */,
+				2E54BBEA27C39CD40052D2E8 /* APICosntants.swift in Sources */,
+				2E54BBF627C39E630052D2E8 /* CountryModel.swift in Sources */,
+				2E54BBF327C39E490052D2E8 /* CountryUIModel.swift in Sources */,
+				2E54BBE927C39CD40052D2E8 /* APIRouter.swift in Sources */,
+				2E54BBF827C39E810052D2E8 /* CountriesListViewControllerProtocol.swift in Sources */,
+				2E54BBED27C39D7E0052D2E8 /* CountriesListViewModel.swift in Sources */,
+				2E54BBE827C39CD40052D2E8 /* RemoteService.swift in Sources */,
+				2E54BBE727C39CD40052D2E8 /* APIError.swift in Sources */,
 				2E54BBCB27C397920052D2E8 /* AppDelegate.swift in Sources */,
+				2E54BBF027C39E0C0052D2E8 /* CountriesListViewModelProtocol.swift in Sources */,
 				2E54BBCD27C397920052D2E8 /* SceneDelegate.swift in Sources */,
+				2E54BBFA27C39F590052D2E8 /* RemoteServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
